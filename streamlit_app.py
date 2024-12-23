@@ -39,10 +39,17 @@
 # **************************************************
 
 # **************************************************
+# Note: Do Not Write Below Codes!
 # import os
+# os.system(command="cls")
+# **************************************************
 # import streamlit as st
 
-# os.system(command="cls")
+# st.write("Hello, World!")  # <p>
+# **************************************************
+
+# **************************************************
+# import streamlit as st
 
 # st.write("Hello, World!")
 # st.write("I'm Dariush Tasdighi!")
@@ -51,10 +58,7 @@
 # **************************************************
 # In One Line!
 # **************************************************
-# import os
 # import streamlit as st
-
-# os.system(command="cls")
 
 # st.write("Hello, World!", "I'm Dariush Tasdighi!")
 # **************************************************
@@ -62,25 +66,19 @@
 # **************************************************
 # Using Markdown
 # **************************************************
-# import os
 # import streamlit as st
 
-# os.system(command="cls")
+# st.header(body="Dariush Tasdighi")  # <h2> --> Best Practice
 
-# st.header(body="Dariush Tasdighi")  # <h2>
+# st.markdown(body="## Dariush Tasdighi")  # <h2>
 
-# st.markdown(body="## Dariush Tasdighi")
-
-# st.markdown(body="<h2>Dariush Tasdighi</h2>")
+# st.markdown(body="<h2>Dariush Tasdighi</h2>")  # می‌کند Encode به خاطر مسائل امنیتی
 
 # st.markdown(body="<h2>Dariush Tasdighi</h2>", unsafe_allow_html=True)
 # **************************************************
 
 # **************************************************
-# import os
 # import streamlit as st
-
-# os.system(command="cls")
 
 # st.markdown(body="# Dariush Tasdighi")
 # st.markdown(body="## Dariush Tasdighi")
@@ -88,6 +86,14 @@
 # st.markdown(body="#### Dariush Tasdighi")
 # st.markdown(body="##### Dariush Tasdighi")
 # st.markdown(body="###### Dariush Tasdighi")
+# st.divider()
+
+# st.write("# Dariush Tasdighi")
+# st.write("## Dariush Tasdighi")
+# st.write("### Dariush Tasdighi")
+# st.write("#### Dariush Tasdighi")
+# st.write("##### Dariush Tasdighi")
+# st.write("###### Dariush Tasdighi")
 # st.divider()
 
 # # body = """# Dariush Tasdighi
@@ -106,32 +112,11 @@
 # ###### Dariush Tasdighi
 # """
 
-# st.write(body)
-# st.divider()
-
 # st.markdown(body=body)
 # st.divider()
 
 # st.write(body)
 # st.divider()
-
-# st.write("# Dariush Tasdighi")
-# st.write("## Dariush Tasdighi")
-# st.write("### Dariush Tasdighi")
-# st.write("#### Dariush Tasdighi")
-# st.write("##### Dariush Tasdighi")
-# st.write("###### Dariush Tasdighi")
-# st.divider()
-# **************************************************
-
-# **************************************************
-# import os
-# import streamlit as st
-
-# os.system(command="cls")
-
-# st.header(body="Dariush")
-# st.header(body="Dariush", divider="rainbow")
 # **************************************************
 
 # **************************************************
@@ -141,27 +126,36 @@
 # https://github.com/ikatyang/emoji-cheat-sheet
 # https://dev.to/nikolab/complete-list-of-github-markdown-emoji-markup-5aia
 # **************************************************
-# import os
 # import streamlit as st
 
-# os.system(command="cls")
-
 # # نکته مهم: این دستور باید اول نوشته شود
-# # st.set_page_config(page_title="Dariush Tasdighi", page_icon="👋")
-# st.set_page_config(page_title="Dariush Tasdighi", page_icon="👋", layout="wide")
+# st.set_page_config(page_title="Dariush Tasdighi", page_icon="👋")
+# # st.set_page_config(page_title="Dariush Tasdighi", page_icon="👋", layout="wide")
+
+# st.header(body="Dariush")
+# st.header(body="👋 Dariush")
+# st.header(body=":wave: Dariush")
+# st.header(body="Dariush", divider="rainbow")
+# **************************************************
+
+# **************************************************
+# import streamlit as st
 
 # st.title(body="👋 Welcome to Dariush's Streamlit App!")  # <h1>
 # st.header(body="👋 Welcome to Dariush's Streamlit App!")  # <h2>
 # st.subheader(body="👋 Welcome to Dariush's Streamlit App!")  # <h3>
 
-# st.markdown(body="Hello, **Dariush**! :computer:")
 # st.markdown(body="Hello, _Dariush_! :kiss:")
+# st.markdown(body="Hello, **Dariush**! :computer:")
+# st.divider()
+
+# st.write("Hello, _Dariush_! :kiss:")
+# st.write("Hello, **Dariush**! :computer:")
 # st.divider()
 
 # st.caption(body="This is a small text!")
 # st.divider()
 
-# st.write("Hello, World! :wave:")
 # st.write("[Learn More](https://IranianExperts.ir)")
 # st.divider()
 
@@ -176,10 +170,7 @@
 # **************************************************
 
 # **************************************************
-# import os
 # import streamlit as st
-
-# os.system(command="cls")
 
 # st.warning(body="Warning")
 # st.divider()
@@ -204,25 +195,24 @@
 # import os
 # import streamlit as st
 
-# os.system(command="cls")
-
 # # آدرس‌دهی نسبی
 # image_file_path = "./static/images/dariush_tasdighi.jpg"
 
-# # آدرس‌دهی فیزیکی
-# # image_file_path = os.path.join(os.getcwd(), "static", "images", "dariush_tasdighi.jpg")
-
-# # st.image(image=image_file_path)
+# st.image(image=image_file_path)
 # st.image(image=image_file_path, width=200)
+# st.write("Image File Path:", image_file_path)
+# st.divider()
 
-# st.write(image_file_path)
+# # آدرس‌دهی فیزیکی
+# image_file_path = os.path.join(os.getcwd(), "static", "images", "dariush_tasdighi.jpg")
+
+# st.image(image=image_file_path, width=200)
+# st.write("Image File Path:", image_file_path)
+# st.divider()
 # **************************************************
 
 # **************************************************
-# import os
 # import streamlit as st
-
-# os.system(command="cls")
 
 # pressed = st.button(label="Press Me")
 
@@ -233,10 +223,7 @@
 # **************************************************
 # Learning: toast()
 # **************************************************
-# import os
 # import streamlit as st
-
-# os.system(command="cls")
 
 # pressed = st.button(label="Press Me")
 
@@ -247,12 +234,9 @@
 # **************************************************
 
 # **************************************************
-# یک چیز باحال و هیجان‌انگیز
+# دو چیز باحال و هیجان‌انگیز
 # **************************************************
-# import os
 # import streamlit as st
-
-# os.system(command="cls")
 
 # button_1_pressed = st.button(label="Button (1)")
 
@@ -268,10 +252,7 @@
 # **************************************************
 
 # **************************************************
-# import os
 # import streamlit as st
-
-# os.system(command="cls")
 
 # name = st.text_input(label="Name")
 
@@ -293,15 +274,12 @@
 # **************************************************
 
 # **************************************************
-# import os
 # import streamlit as st
-
-# os.system(command="cls")
 
 # name = st.text_input(label="Name")
 
 # # if name is not None and name != "":
-#     # st.write(f"Hello, {name}!")
+# #     st.write(f"Hello, {name}!")
 
 # if name:
 #     st.write(f"Hello, {name}!")
@@ -310,10 +288,7 @@
 # **************************************************
 # یک مشکل اساسی
 # **************************************************
-# import os
 # import streamlit as st
-
-# os.system(command="cls")
 
 # number = 0
 
@@ -327,10 +302,7 @@
 # **************************************************
 # حل مشکل اساسی
 # **************************************************
-# import os
 # import streamlit as st
-
-# os.system(command="cls")
 
 # # دستور ذیل صحیح نمی‌باشد
 # # st.session_state.number = 0
@@ -357,18 +329,13 @@
 # **************************************************
 
 # **************************************************
-# import os
+# Create Chatbot Step by Step
+# **************************************************
 # import streamlit as st
 
-# os.system(command="cls")
-
 # st.set_page_config(page_title="DT Chatbot", page_icon="👋")
-# # st.set_page_config(page_title="DT Chatbot", page_icon="👋", layout="wide")
 
-# st.title(body="DT Chatbot")
-
-# with st.sidebar:
-#     st.subheader(body="Settings")
+# st.header(body="DT Chatbot", divider="rainbow")
 
 # st.chat_input(placeholder="Type your question here...")
 
@@ -380,178 +347,180 @@
 # **************************************************
 
 # **************************************************
-# import os
 # import streamlit as st
-
-# os.system(command="cls")
 
 # st.set_page_config(page_title="DT Chatbot", page_icon="👋")
 
-# st.title(body="DT Chatbot")
-
 # with st.sidebar:
-#     st.subheader(body="Settings")
+#     st.subheader(body="Settings", divider="rainbow")
 
-# user_query = st.chat_input(placeholder="Type your question here...")
+# st.header(body="DT Chatbot", divider="rainbow")
 
-# if user_query:
-#     with st.chat_message(name="Human"):
-#         st.write(user_query)
+# st.chat_input(placeholder="Type your question here...")
 
-#     with st.chat_message(name="AI"):
-#         st.write(f"I don't know! {user_query}")
+# with st.chat_message(name="AI"):
+#     st.write("Hello! How can I help you?")
+
+# with st.chat_message(name="Human"):
+#     st.write("I want to know about your products.")
 # **************************************************
 
 # **************************************************
-# import os
 # import streamlit as st
-
-
-# def get_response(user_query: str) -> str:
-#     response = f"I don't know! {user_query}"
-#     return response
-
-
-# os.system(command="cls")
 
 # st.set_page_config(page_title="DT Chatbot", page_icon="👋")
 
-# st.title(body="DT Chatbot")
-
 # with st.sidebar:
-#      st.subheader(body="Settings")
+#     st.subheader(body="Settings", divider="rainbow")
 
-# user_query = st.chat_input(placeholder="Type your question here...")
+# st.header(body="DT Chatbot", divider="rainbow")
 
-# if user_query:
-#     response = get_response(user_query=user_query)
+# prompt = st.chat_input(placeholder="Type your question here...")
 
+# if prompt:
 #     with st.chat_message(name="Human"):
-#         st.write(user_query)
+#         st.write(prompt)
 
 #     with st.chat_message(name="AI"):
+#         response = f"I don't know! {prompt}"
 #         st.write(response)
 # **************************************************
 
 # **************************************************
-# We Need Chat History, But There is a Problem!
-# **************************************************
-# import os
 # import streamlit as st
 
 
-# def get_response(user_query: str) -> str:
-#     response = f"I don't know! {user_query}"
+# def get_response(prompt: str) -> str:
+#     response = f"I don't know! {prompt}"
 #     return response
 
 
-# os.system(command="cls")
-
 # st.set_page_config(page_title="DT Chatbot", page_icon="👋")
-
-# st.title(body="DT Chatbot")
-
-# # chat_history = []
-# chat_history = [
-#     {"role": "assistant", "content": "Hello, I'm Dariush. How can I help you?"}
-# ]
 
 # with st.sidebar:
-#     st.subheader(body="Settings")
+#     st.subheader(body="Settings", divider="rainbow")
 
-# user_query = st.chat_input(placeholder="Type your question here...")
+# st.header(body="DT Chatbot", divider="rainbow")
 
-# if user_query:
-#     response = get_response(user_query=user_query)
+# prompt = st.chat_input(placeholder="Type your question here...")
 
-#     chat_history.append({"role": "user", "content": user_query})
-#     chat_history.append({"role": "assistant", "content": response})
+# if prompt:
+#     response = get_response(prompt=prompt)
 
-# st.write(chat_history)
+#     with st.chat_message(name="Human"):
+#         st.write(prompt)
+
+#     with st.chat_message(name="AI"):
+#         response = f"I don't know! {prompt}"
+#         st.write(response)
 # **************************************************
 
 # **************************************************
-# Fix the previous problem with session state
+# We Need Chat History (Messages), But There is a Problem!
 # **************************************************
-# import os
 # import streamlit as st
 
 
-# def get_response(user_query: str) -> str:
-#     response = f"I don't know! {user_query}"
+# def get_response(prompt: str) -> str:
+#     response = f"I don't know! {prompt}"
 #     return response
 
 
-# os.system(command="cls")
+# # messages = []
+# messages = [{"role": "assistant", "content": "Hello, I'm Dariush. How can I help you?"}]
 
 # st.set_page_config(page_title="DT Chatbot", page_icon="👋")
 
-# st.title(body="DT Chatbot")
+# with st.sidebar:
+#     st.subheader(body="Settings", divider="rainbow")
 
-# if st.session_state.get(key="chat_history") is None:
-#     # st.session_state.chat_history = []
-#     st.session_state.chat_history = [
+# st.header(body="DT Chatbot", divider="rainbow")
+
+# prompt = st.chat_input(placeholder="Type your question here...")
+
+# if prompt:
+#     messages.append({"role": "user", "content": prompt})
+#     response = get_response(prompt=prompt)
+#     messages.append({"role": "assistant", "content": response})
+
+# st.write(messages)
+# **************************************************
+
+# **************************************************
+# Fix the previous problem with session state!
+# **************************************************
+# import streamlit as st
+
+
+# def get_response(prompt: str) -> str:
+#     response = f"I don't know! {prompt}"
+#     return response
+
+
+# if "messages" not in st.session_state:
+#     # st.session_state.messages = []
+#     st.session_state.messages = [
 #         {"role": "assistant", "content": "Hello, I'm Dariush. How can I help you?"}
 #     ]
 
+# st.set_page_config(page_title="DT Chatbot", page_icon="👋")
+
 # with st.sidebar:
-#     st.subheader(body="Settings")
+#     st.subheader(body="Settings", divider="rainbow")
 
-# user_query = st.chat_input(placeholder="Type your question here...")
+# st.header(body="DT Chatbot", divider="rainbow")
 
-# if user_query:
-#     response = get_response(user_query=user_query)
+# prompt = st.chat_input(placeholder="Type your question here...")
 
-#     st.session_state.chat_history.append({"role": "user", "content": user_query})
-#     st.session_state.chat_history.append({"role": "assistant", "content": response})
+# if prompt:
+#     st.session_state.messages.append({"role": "user", "content": prompt})
+#     response = get_response(prompt=prompt)
+#     st.session_state.messages.append({"role": "assistant", "content": response})
 
-# st.write(st.session_state.chat_history)
+# st.write(st.session_state.messages)
 # **************************************************
 
 # **************************************************
 # Final Code! (English)
 # **************************************************
-# import os
-# import streamlit as st
+import streamlit as st
 
 
-# def get_response(user_query: str) -> str:
-#     response = f"I don't know! {user_query}"
-#     return response
+def get_response(prompt: str) -> str:
+    response = f"I don't know! {prompt}"
+    return response
 
 
-# os.system(command="cls")
+if "messages" not in st.session_state:
+    # st.session_state.messages = []
+    st.session_state.messages = [
+        {"role": "assistant", "content": "Hello, I'm Dariush. How can I help you?"}
+    ]
 
-# st.set_page_config(page_title="DT Chatbot", page_icon="👋")
+st.set_page_config(page_title="DT Chatbot", page_icon="👋")
 
-# st.title(body="DT Chatbot")
+with st.sidebar:
+    st.subheader(body="Settings", divider="rainbow")
 
-# if st.session_state.get(key="chat_history") is None:
-#     st.session_state.chat_history = [
-#         {"role": "assistant", "content": "Hello, I'm Dariush. How can I help you?"}
-#     ]
+st.header(body="DT Chatbot", divider="rainbow")
 
-# with st.sidebar:
-#     st.subheader(body="Settings")
+prompt = st.chat_input(placeholder="Type your question here...")
 
-# user_query = st.chat_input(placeholder="Type your question here...")
+if prompt:
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    response = get_response(prompt=prompt)
+    st.session_state.messages.append({"role": "assistant", "content": response})
 
-# if user_query:
-#     response = get_response(user_query=user_query)
+# st.write(st.session_state.messages)
+# for index, message in enumerate(st.session_state.messages):
 
-#     st.session_state.chat_history.append({"role": "user", "content": user_query})
-#     st.session_state.chat_history.append({"role": "assistant", "content": response})
-
-# # st.write(st.session_state.chat_history)
-# # for message in st.session_state.chat_history:
-
-# for index, message in enumerate(st.session_state.chat_history):
-#     if message["role"] == "user":
-#         with st.chat_message(name="Human"):
-#             st.write(message["content"])
-#     elif message["role"] == "assistant":
-#         with st.chat_message(name="AI"):
-#             st.write(message["content"])
+for message in st.session_state.messages:
+    if message["role"] == "user":
+        with st.chat_message(name="Human"):
+            st.write(message["content"])
+    elif message["role"] == "assistant":
+        with st.chat_message(name="AI"):
+            st.write(message["content"])
 # **************************************************
 
 # **************************************************
@@ -622,75 +591,75 @@
 # **************************************************
 # Final Code! (Persian) with API Key
 # **************************************************
-import os
-import streamlit as st
+# import os
+# import streamlit as st
 
 
-def get_response(user_query: str) -> str:
-    response = f"متاسفانه من پاسخ سوال شما را نمی‌دانم! {user_query}"
-    return response
+# def get_response(user_query: str) -> str:
+#     response = f"متاسفانه من پاسخ سوال شما را نمی‌دانم! {user_query}"
+#     return response
 
 
-os.system(command="cls")
+# os.system(command="cls")
 
-st.set_page_config(page_title="پشتیبانی شرکت ما", page_icon="👋")
+# st.set_page_config(page_title="پشتیبانی شرکت ما", page_icon="👋")
 
-streamlit_style = """
-<style>
-    @import url('https://fonts.cdnfonts.com/css/iransansx');
+# streamlit_style = """
+# <style>
+#     @import url('https://fonts.cdnfonts.com/css/iransansx');
 
-    html, body, p, h1, h2, h3, h4, h5, h6, input, textarea {
-        font-family: 'IRANSansX', tahoma !important;
-    }
+#     html, body, p, h1, h2, h3, h4, h5, h6, input, textarea {
+#         font-family: 'IRANSansX', tahoma !important;
+#     }
 
-    .block-container, section, input, textarea {
-        direction: rtl;
-        text-align: justify;
-    }
-</style>
-"""
+#     .block-container, section, input, textarea {
+#         direction: rtl;
+#         text-align: justify;
+#     }
+# </style>
+# """
 
-st.markdown(body=streamlit_style, unsafe_allow_html=True)
+# st.markdown(body=streamlit_style, unsafe_allow_html=True)
 
-st.header(body="تیم پشتیبانی شرکت ما، در خدمت شما می‌باشد", divider="rainbow")
+# st.header(body="تیم پشتیبانی شرکت ما، در خدمت شما می‌باشد", divider="rainbow")
 
-if "api_key" not in st.session_state:
-    st.session_state.api_key = ""
-    st.error(body="لطفا برای انجام عملیات، API Key را وارد نمایید!")
+# if "api_key" not in st.session_state:
+#     st.session_state.api_key = ""
+#     st.error(body="لطفا برای انجام عملیات، API Key را وارد نمایید!")
 
-if "chat_history" not in st.session_state:
-    st.session_state.chat_history = [
-        {
-            "role": "system",
-            "content": "You are a C# and Python expert developer assistant.",
-        },
-        {
-            "role": "assistant",
-            "content": "سلام، وقت به خیر. من داریوش تصدیقی هستیم، چه کمکی می‌تونم به شما بکنم؟",
-        },
-    ]
+# if "chat_history" not in st.session_state:
+#     st.session_state.chat_history = [
+#         {
+#             "role": "system",
+#             "content": "You are a C# and Python expert developer assistant.",
+#         },
+#         {
+#             "role": "assistant",
+#             "content": "سلام، وقت به خیر. من داریوش تصدیقی هستیم، چه کمکی می‌تونم به شما بکنم؟",
+#         },
+#     ]
 
-with st.sidebar:
-    st.subheader(body="تنظیمات")
+# with st.sidebar:
+#     st.subheader(body="تنظیمات")
 
-    st.session_state.api_key = st.text_input(label="API Key")
+#     st.session_state.api_key = st.text_input(label="API Key")
 
-if st.session_state.api_key:
-    user_query = st.chat_input(placeholder="لطفا سوال خودتان را اینجا بنویسید...")
+# if st.session_state.api_key:
+#     user_query = st.chat_input(placeholder="لطفا سوال خودتان را اینجا بنویسید...")
 
-    if user_query:
-        response = get_response(user_query=user_query)
+#     if user_query:
+#         response = get_response(user_query=user_query)
 
-        st.session_state.chat_history.append({"role": "user", "content": user_query})
-        st.session_state.chat_history.append({"role": "assistant", "content": response})
+#         st.session_state.chat_history.append({"role": "user", "content": user_query})
+#         st.session_state.chat_history.append({"role": "assistant", "content": response})
 
-    for index, message in enumerate(st.session_state.chat_history):
-        if message["role"] == "user":
-            with st.chat_message(name="Human"):
-                st.write(message["content"])
-        elif message["role"] == "assistant":
-            with st.chat_message(name="AI"):
-                st.write(message["content"])
+#     for index, message in enumerate(st.session_state.chat_history):
+#         if message["role"] == "user":
+#             with st.chat_message(name="Human"):
+#                 st.write(message["content"])
+#         elif message["role"] == "assistant":
+#             with st.chat_message(name="AI"):
+#                 st.write(message["content"])
 # **************************************************
 
 # **************************************************
