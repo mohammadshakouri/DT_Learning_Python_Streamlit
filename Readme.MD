@@ -12,23 +12,31 @@
 
 ## Setup
 
-- python -m venv .venv
-- .\\.venv\Scripts\activate
+```shell
+python -m venv .venv
+.\\.venv\Scripts\activate
 
-- python -m pip install -U pip
-- python -m pip install -U pandas
-- python -m pip install -U yfinance
-- python -m pip install -U requests
-- python -m pip install -U streamlit
+python -m pip install -U pip
 
-Now! we write / modify / run Source Code(s)
+python -m pip install -U streamlit
 
-- deactivate
+python -m pip install -U pandas
+python -m pip install -U requests
+python -m pip install -U yfinance
+
+# Now! we write / modify / run Source Code(s)
+
+deactivate
+```
 
 ## For Testing Streamlit
 
-- streamlit hello
+```shell
+streamlit hello
+```
 
 ## For Running Project
 
-- streamlit run ./streamlit_app.py
+```shell
+streamlit run ./streamlit_app.py
+```
