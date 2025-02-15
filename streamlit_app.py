@@ -2,17 +2,17 @@
 # pip install -U streamlit
 # python -m pip install -U streamlit
 #
-# pip install -U streamlit
-# python -m pip install -U streamlit
+# pip3 install -U streamlit
+# python3 -m pip3 install -U streamlit
 # **************************************************
 
 
 # **************************************************
 # python .\streamlit_app.py
 # **************************************************
-import streamlit
+# import streamlit
 
-print("Streamlit Version:", streamlit.__version__)
+# print("Streamlit Version:", streamlit.__version__)
 # **************************************************
 
 
@@ -180,8 +180,8 @@ print("Streamlit Version:", streamlit.__version__)
 # import streamlit as st
 
 # # نکته مهم: این دستور باید اول نوشته شود
-# st.set_page_config(page_title="Dariush Tasdighi", page_icon="👋")
-# # st.set_page_config(page_title="Dariush Tasdighi", page_icon="👋", layout="wide")
+# # st.set_page_config(page_title="Dariush Tasdighi", page_icon="👋")
+# st.set_page_config(page_title="Dariush Tasdighi", page_icon="👋", layout="wide")
 
 # st.header(body="Dariush")
 # st.header(body="👋 Dariush")
@@ -258,6 +258,7 @@ print("Streamlit Version:", streamlit.__version__)
 # st.divider()
 
 # # آدرس‌دهی فیزیکی
+# # C:\Program Files\...
 # image_file_path = os.path.join(os.getcwd(), "static", "images", "dariush_tasdighi.jpg")
 
 # st.image(image=image_file_path, width=200)
@@ -311,7 +312,7 @@ print("Streamlit Version:", streamlit.__version__)
 # **************************************************
 # import streamlit as st
 
-# name = st.text_input(label="Name")
+# name: str = st.text_input(label="Name")
 
 # st.write(f"Hello, {name}!")
 # **************************************************
@@ -356,7 +357,7 @@ print("Streamlit Version:", streamlit.__version__)
 # **************************************************
 # import streamlit as st
 
-# number = 0
+# number: int = 0
 
 # pressed = st.button(label="Press Me")
 
@@ -475,6 +476,7 @@ print("Streamlit Version:", streamlit.__version__)
 # USER: str = "USER"
 
 
+# # New
 # def get_assistant_answer(user_prompt: str) -> str:
 #     assistant_answer: str = f"I don't know! {user_prompt}"
 #     return assistant_answer
@@ -518,6 +520,7 @@ print("Streamlit Version:", streamlit.__version__)
 #     return assistant_answer
 
 
+# # New
 # # messages = []
 # messages = [{"role": "assistant", "content": "Hello, I'm Dariush. How can I help you?"}]
 
@@ -672,7 +675,7 @@ print("Streamlit Version:", streamlit.__version__)
 # st.markdown(body=STREAMLIT_STYLE, unsafe_allow_html=True)
 
 # with st.sidebar:
-#     st.subheader(body="Settings", divider="rainbow")
+#     st.subheader(body="تنظیمات", divider="rainbow")
 
 # st.header(body="به ربات داریوش تصدیقی خوش آمدید!", divider="rainbow")
 
@@ -699,55 +702,55 @@ print("Streamlit Version:", streamlit.__version__)
 
 
 # **************************************************
-# import streamlit as st
-# import chatbot_constants as constants
-# import chatbot_functions as functions
+import streamlit as st
+import chatbot_constants as constants
+import chatbot_functions as functions
 
-# functions.set_page_config()
-# functions.initial_session_state()
+functions.set_page_config()
+functions.initial_session_state()
 
-# with st.sidebar:
-#     st.subheader(body=constants.SETTINGS, divider="rainbow")
+with st.sidebar:
+    st.subheader(body=constants.SETTINGS, divider="rainbow")
 
-#     st.session_state.model_name = st.radio(
-#         index=0,
-#         options=constants.MODELS,
-#         label=constants.SELECT_YOUR_MODEL,
-#     ).strip()
+    st.session_state.model_name = st.radio(
+        index=0,
+        options=constants.MODELS,
+        label=constants.SELECT_YOUR_MODEL,
+    ).strip()
 
-#     st.write(constants.SELECTED_MODEL, st.session_state.model_name)
-#     st.divider()
+    st.write(constants.SELECTED_MODEL, st.session_state.model_name)
+    st.divider()
 
-#     st.markdown(body=constants.ABOUT, unsafe_allow_html=True)
-#     st.divider()
+    st.markdown(body=constants.ABOUT, unsafe_allow_html=True)
+    st.divider()
 
-# st.header(body=constants.PAGE_HEADER, divider="rainbow")
+st.header(body=constants.PAGE_HEADER, divider="rainbow")
 
-# if not st.session_state.model_name:
-#     st.error(body=constants.ERROR_YOU_DID_NOT_SPECIFY_MODEL_NAME)
+if not st.session_state.model_name:
+    st.error(body=constants.ERROR_YOU_DID_NOT_SPECIFY_MODEL_NAME)
 
-# if st.session_state.model_name:
-#     user_prompt: str | None = st.chat_input(
-#         placeholder=constants.USER_PROMPT_PLACEHOLDER
-#     )
+if st.session_state.model_name:
+    user_prompt: str | None = st.chat_input(
+        placeholder=constants.USER_PROMPT_PLACEHOLDER
+    )
 
-#     if user_prompt:
-#         user_prompt = user_prompt.strip()
+    if user_prompt:
+        user_prompt = user_prompt.strip()
 
-#     if user_prompt:
-#         st.session_state.messages.append({"role": "user", "content": user_prompt})
-#         assistant_answer = functions.get_assistant_answer(user_prompt=user_prompt)
-#         st.session_state.messages.append(
-#             {"role": "assistant", "content": assistant_answer}
-#         )
+    if user_prompt:
+        st.session_state.messages.append({"role": "user", "content": user_prompt})
+        assistant_answer = functions.get_assistant_answer(user_prompt=user_prompt)
+        st.session_state.messages.append(
+            {"role": "assistant", "content": assistant_answer}
+        )
 
-#     for index, message in enumerate(st.session_state.messages):
-#         if message["role"] == "user":
-#             with st.chat_message(name=constants.USER):
-#                 st.write(message["content"])
-#         elif message["role"] == "assistant":
-#             with st.chat_message(name=constants.AI):
-#                 st.write(message["content"])
+    for index, message in enumerate(st.session_state.messages):
+        if message["role"] == "user":
+            with st.chat_message(name=constants.USER):
+                st.write(message["content"])
+        elif message["role"] == "assistant":
+            with st.chat_message(name=constants.AI):
+                st.write(message["content"])
 # **************************************************
 
 # **************************************************

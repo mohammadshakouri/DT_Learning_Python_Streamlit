@@ -7,7 +7,7 @@ import chatbot_constants as constants
 
 
 def set_page_config() -> None:
-    st.set_page_config(page_title="DT Chatbot", page_icon="👋", layout="wide")
+    st.set_page_config(page_title=constants.PAGE_TITLE, page_icon="👋", layout="wide")
     st.markdown(body=constants.STREAMLIT_STYLE, unsafe_allow_html=True)
 
 
@@ -22,3 +22,6 @@ def initial_session_state() -> None:
 def get_assistant_answer(user_prompt: str) -> str:
     assistant_answer = f"متاسفانه من پاسخ سوال شما را نمی‌دانم! {user_prompt}"
     return assistant_answer
+
+# def get_assistant_answer(model_name: str, messages: list, temperature: float = 0.8) -> str:
+#     pass

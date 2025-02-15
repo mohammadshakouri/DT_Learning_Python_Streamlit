@@ -50,7 +50,8 @@ ABOUT: str = """
 </p>
 """
 
-SETTINGS = "تنظیمات"
+SETTINGS: str = "تنظیمات"
+PAGE_TITLE: str = "Chatbot داریوش تصدیقی"
 SELECTED_MODEL: str = "مدل انتخاب شده:"
 SELECT_YOUR_MODEL: str = "لطفا مدل خود را انتخاب نمایید:"
 PAGE_HEADER: str = "👋 به Chatbot داریوش تصدیقی خوش آمدید!"

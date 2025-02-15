@@ -1,20 +1,15 @@
-# Learning Streamlit (For Chatbot / Data Science)
+# Learning Streamlit for Chatbot / Data Science
 
 - https://streamlit.io
 - https://docs.streamlit.io
 - https://pypi.org/project/streamlit
 - https://github.com/streamlit/streamlit
 
-
-## For Publishing!
-
-- https://streamlit.io/cloud
-
 ## Setup
 
 ```shell
 python -m venv .venv
-.\\.venv\Scripts\activate
+.\.venv\Scripts\activate
 
 python -m pip install -U pip
 
@@ -29,6 +24,14 @@ python -m pip install -U yfinance
 deactivate
 ```
 
+## For Publishing!
+
+- Self Host / VPS Server
+- https://streamlit.io
+    - https://streamlit.io/cloud
+- Microsoft Azure (Web App)
+- https://huggingface.co/new-space
+
 ## For Testing Streamlit
 
 ```shell
@@ -39,4 +42,9 @@ streamlit hello
 
 ```shell
 streamlit run ./streamlit_app.py
+```
+
+```shell
+python -m streamlit run ./app.py --server.address 0.0.0.0 --server.port 8000
+
 ```
